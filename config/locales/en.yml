@@ -1,0 +1,281 @@
+en:
+  js:
+    markers:
+      marker: You marked the book as %{marker}
+      cancel_marker: You canceled the %{marker} mark
+    purchase_requests:
+      l11: Display
+      l12: requesets per pages
+      l2: Nothing found - Sorry
+      l31: Showing page
+      l32: of
+      l4: No requests available
+      l51: filtered from
+      l52: total request
+      l6: "Search:"
+      l7: First
+      l8: Last
+      l9: Next
+      l10: Previous
+    favorites:
+      l12: favorites per pages
+      l4: No favorites available
+      l52: total favorite
+  layouts:
+    application:
+      book_review: Book review
+    header:
+      title1: Book
+      title2: Review
+      home: Home
+      book: Book
+      favorite: Favorite
+      reading: Reading
+      readed: Readed
+      request_book: Request buy books
+      contact: Contact
+      sign_in: Sign in
+      register: Register
+      language: Language
+      english: English
+      vietnamese: Vietnamese
+      personal_information: Personal information
+      change_password: Change password
+      sign_out: Sign out
+      create_book: Create book
+    site_blocks:
+      title: Read, rate and request to buy book
+      maxim: We will create wonderful experience for you!
+      search_content: what are you searching for?
+      can_choose_format: Can choose format
+      search: Search
+    statistical:
+      users: Users
+      books: Books
+      website: Website
+      mobile: Mobile
+      desktop: Desktop
+      orther: Orther..
+      highest_rated: Highest rated
+    footer:
+      about_us: Some information about us
+      introduce: We have a lot of books in the library
+      address: "Address: Ha Noi - Viet Nam"
+      telephone: "Telephone: 0966.666.666"
+      follow_us: Follow Us
+      search_book: Search books...
+      copyright1: Copyright © 2019 All rights reserved | This template
+        is made with
+      copyright2: by
+      colorlib: Colorlib
+  shared:
+    error_messages:
+      content1: The form contains
+      content2: error
+    rate:
+      star: Star
+  activerecord:
+    min_date: is too earlier (minimum is %{date})
+    max_date: is too latest (maximum is %{date})
+    number: only numeric format
+    attributes:
+      marker:
+        statuses:
+          favorite: Favorite
+          readed: Readed
+          reading: Reading
+          purchase_request: Purchase request
+          rate_and_review: Rate and review
+      user_profile:
+        genders:
+          male: Male
+          female: Female
+  date:
+    formats:
+      date: "%d/%m/%Y"
+  time:
+    formats:
+      datetime: "%H:%M:%S %d/%m/%y"
+  devise:
+    sessions:
+      user:
+        invalid: Invalid password.
+        not_found_in_database: Invalid email.
+        unconfirmed: You have to confirm your email address before continuing.
+        signed_in: Signed in successfully.
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+  home:
+    index:
+      home_page: Home page
+  admin:
+    home:
+      index:
+        home_page: Home page
+  books:
+    index:
+      list_books: List books
+    new:
+      create_new_book: Create new book
+      create: Create
+      category: Category
+      title: Title
+      cover_image: Cover image
+      publish_date: Publish date
+      number_pages: Number pages
+      price: Price
+      author: Author
+      description: Description
+    create:
+      create_success: The book was successfully created
+      create_failure: An error occurred while creating the book
+    show:
+      title: Title
+      show_book: Book information
+      no_marker: When logged in, you can mark books as favorites, readed,
+        reading,...
+      title: Title
+      number_pages: "Number pages "
+      author: "Author "
+      price: "Price "
+      description: Description
+      comment: Comment
+      average_rating: Average Rating
+      user_of_reviews: user of reviews
+      reviews: " reviews"
+      text_review: You have the rating below
+    edit:
+      not_found: No find book needed edit
+      edit_book: Edit book
+      update: Update
+      category: Category
+      title: Title
+      cover_image: Cover image
+      publish_date: Publish date
+      number_pages: Number pages
+      price: Price
+      author: Author
+      description: Description
+    update:
+      not_found: No find book needed update
+      update_success: Successful book update
+      update_failure: Update the book failed
+    destroy:
+      not_found: No find book needed delete
+      delete_success: The book has been successfully deleted
+      delete_failure: An error occurred while deleting books
+    book:
+      number_pages: Number pages
+      author: Author
+      price: Price
+      edit: Edit
+  users:
+    registrations:
+      edit:
+        home_page: "Change password"
+        current_password: "Current password"
+        password: "Password"
+        text_password: "(we need your current password to confirm your changes)"
+        text_new_password: "(leave blank if you don't want to change it)"
+        password_confirmation: "Confirmation"
+        characters_minimum: "6 characters minimum"
+        btn_update: "Update"
+        btn_back: "Back"
+      new:
+        password: "Password"
+        password_confirmation: "Confirmation"
+        characters_minimum: "6 characters minimum"
+        signup: "Sign up"
+    shared:
+      _links:
+        signup: "Sign up"
+        login: "Log in"
+        signin_with: "Sign in with %{OmniAuth::Utils.camelize(provider)}"
+        forgot_your_password: "Forgot your password"
+  markers:
+    form:
+      cancel_favorite:
+        cancel_favorite: Cancel favorite
+      cancel_readed:
+        cancel_readed: Cancel readed
+      cancel_reading:
+        cancel_reading: Cancel reading
+      cancel_purchase_request:
+        cancel_purchase_request: Cancel purchase request
+      favorite:
+        favorite: Favorite
+      readed:
+        readed: Readed
+      reading:
+        reading: Reading
+      purchase_request:
+        purchase_request: Purchase request
+    create:
+      book_not_found: Book not found
+    destroy:
+      marker_not_found: Marker not found
+      book_not_found: Book not found
+  purchase_requests:
+    request:
+      cancel: Cancel
+      confirm: You want to cancel the book purchase request?
+    index:
+      purchase_requests: List of the requests buy books
+      cover_image: Cover image
+      title: Title
+      number_pages: Number pages
+      author: Author
+      price: Price
+      action: Action
+      time_request: Time to send request
+    destroy:
+      success: Cancel successful book purchase request
+      purchase_request_not_found: Purchase request not found
+  reviews:
+    review:
+      btn_edit: Edit
+      btn_del: Delete
+      mess: No reviews just yet, would you like to add the first!
+      mess_del: Are you sure?
+    create:
+      create_success: The review was successfully created
+      create_failure: An error occurred while creating the review
+  book_price: $%{price}
+  purchase_requests:
+    request:
+      cancel: Cancel
+      confirm: You want to cancel the book purchase request?
+    index:
+      purchase_requests: List of the requests buy books
+      cover_image: Cover image
+      title: Title
+      number_pages: Number pages
+      author: Author
+      price: Price
+      action: Action
+      time_request: Time to send request
+    destroy:
+      success: Cancel successful book purchase request
+      purchase_request_not_found: Purchase request not found
+  favorites:
+    favorite:
+      cancel: Cancel
+      confirm: You want to cancel the book favorite?
+    index:
+      list_favorites: List favorite books
+      cover_image: Cover image
+      title: Title
+      number_pages: Number pages
+      author: Author
+      price: Price
+      action: Action
+      favorite_time_at: Favorite at
+    destroy:
+      success: Cancel successful favorite book
+      destroy_failure: An error occurred while canceling book favorites
+      favorite_not_found: Favorite book not found

@@ -1,0 +1,87 @@
+<% provide :title, @book.title %>
+<% provide :icon, "icon/books.png"%>
+
+<div class="site-section" id="main-content">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-12 text-center border-danger">
+        <h2 class="h1 font-weight-light text-danger">
+          <%= t ".title" %>: <%= @book.title %>
+        </h2>
+      </div>
+    </div>
+    <% if can? Marker::AUTHORIZE_USER, Marker %>
+      <div class="row mt-5 mb-5">
+        <div class="col-md-3 mb-3" id="marker-favorite">
+          <%= marker_form @book.id, :favorite, current_user %>
+        </div>
+        <div class="col-md-3 mb-3" id="marker-readed">
+          <%= marker_form @book.id, :readed, current_user %>
+        </div>
+        <div class="col-md-3 mb-3" id="marker-reading">
+          <%= marker_form @book.id, :reading, current_user %>
+        </div>
+        <div class="col-md-3 mb-3" id="marker-purchase_request">
+          <%= marker_form @book.id, :purchase_request, current_user %>
+        </div>
+      </div>
+    <% else %>
+      <p class="text-danger h5">
+        <%= t ".no_marker"%>
+      </p>
+    <% end %>
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="row book-info">
+          <div class="col-lg-4">
+            <div class="mb-4">
+              <div class="col-xs-4 col-image image-border">
+                <div><%= image_tag "img_2.jpg", alt: "Image", class: "img-fluid" %></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 ml-auto">
+
+              <h2 class="book-title"><%= @book.title %></h2>
+              <h3 class="book-author"><span><%= t ".author" %></span>
+                <%= @book.author %>
+              </h3>
+              <p class="book-desc"><span><%= t ".number_pages" %></span>
+                <%= @book.number_pages %>
+              </p>
+              <p class="book-desc"><span><%= t ".price" %></span>
+                <%= t("book_price", price: @book.price) %>
+              </p>
+              <h2 class="avg-rating"><%= t ".average_rating" %></h2>
+              <span class="number-of-reviews"><%= @book.reviews.count %><%= t ".reviews" %></span>
+              <div class="average-review-rating" data-score=<%= @average_review %>></div>
+              <span class="number-of-reviews"><%= t ".text_review" %></span>
+              <div class=""><%= render "reviews/form" %></div>
+          </div>
+        </div>
+
+        <div class="row description">
+          <h4 class="h5 mb-4 text-black"><%= t ".description" %></h4>
+          <%= @book.description %>
+        </div>
+        <div class="row description">
+          <h4 class="h5 mb-4 text-black"><%= t ".comment" %></h4>
+        </div>
+        <div class="row"></div>
+      </div>
+
+      <div class="col-lg-4 ">
+        <div class="reviews ">
+        <h1 class="review_title"><%= @book.title %></h1>
+          <div class="row mt-5 justify-content-center" id="list-reviews">
+            <%= render @reviews %>
+          </div>
+          <div class="row justify-content-center" id="kaminari-list-reviews">
+            <%= paginate @reviews %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

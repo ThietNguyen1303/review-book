@@ -1,0 +1,5 @@
+<% provide :title, t(".home_page") %>
+<% provide :icon, "icon/books.png"%>
+<% if !user_signed_in? %>
+  <%= render "layouts/statistical" %>
+<% end %>

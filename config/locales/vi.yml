@@ -1,0 +1,281 @@
+vi:
+  js:
+    markers:
+      marker: Bạn đã đánh dấu sách là %{marker}
+      cancel_marker: Bạn đã hủy đánh dấu %{marker}
+    purchase_requests:
+      l11: Hiển thị
+      l12: yêu cầu mỗi trang
+      l2: Không tìm thấy gì - Xin lỗi
+      l31: Hiển thị trang
+      l32: của
+      l4: Không có yêu cầu
+      l51: được lọc từ
+      l52: trong tất cả yêu cầu
+      l6: "Tìm kiếm:"
+      l7: Đầu tiên
+      l8: Cuối cùng
+      l9: Sau
+      l10: Trước
+    favorites:
+      l12: yêu thích mỗi trang
+      l4: Không có yêu thích
+      l52: tất cả yêu thích
+  layouts:
+    application:
+      book_review: Đánh giá sách
+    header:
+      title1: Đánh giá
+      title2: sách
+      home: Trang chủ
+      book: Sách
+      favorite: Yêu thích
+      reading: Đang đọc
+      readed: Đã đọc
+      request_book: Các yêu cầu mua sách
+      contact: Liên hệ
+      sign_in: Đăng nhập
+      register: Đăng kí
+      language: Ngôn ngữ
+      english: Tiếng anh
+      vietnamese: Tiếng việt
+      personal_information: Thông tin cá nhân
+      change_password: Đổi mật khẩu
+      sign_out: Đăng xuất
+      create_book: Tạo sách
+    site_blocks:
+      title: Đọc, đánh giá và yêu cầu mua sách
+      maxim: Chúng tôi sẽ tạo cảm giác trải nghiệm tuyệt vời cho bạn !
+      search_content: Bạn đang tìm gì vậy?
+      can_choose_format: Có thể chọn định dạng
+      search: Tìm kiếm
+    statistical:
+      users: Người dùng
+      books: Sách
+      website: Website
+      mobile: Di động
+      desktop: Máy tính
+      orther: Khác..
+      highest_rated: Đánh giá cao nhất
+    footer:
+      about_us: Một vài thông tin về chúng tôi
+      introduce: Chúng tôi có rất nhiều sách trong thư viện
+      address: "Địa chỉ: Hà Nội - Việt Nam"
+      telephone: "Điện thoại: 0966.666.666"
+      follow_us: Theo dõi chúng tôi
+      search_book: Tìm kiếm sách ...
+      copyright1: Copyright © 2019 All rights reserved | Mãu này được
+        tạo
+      copyright2: bởi
+      colorlib: Colorlib
+  shared:
+    error_messages:
+      content1: Biểu mẫu có chứa
+      content2: lỗi
+    rate:
+      star: Sao
+  activerecord:
+    min_date: quá sớm (nhỏ nhất là %{date})
+    max_date: quá muộn (lớn nhất là %{date})
+    number: chỉ định dạng số
+    attributes:
+      marker:
+        statuses:
+          favorite: Yêu thích
+          readed: Đã đọc
+          reading: Đang đọc
+          purchase_request: Yêu cầu mua
+          rate_and_review: Đánh giá
+      user_profile:
+        genders:
+          male: Nam
+          female: Nữ
+  date:
+    formats:
+      date: "%d/%m/%Y"
+  time:
+    formats:
+      datetime: "%H:%M:%S %d/%m/%y"
+  devise:
+    sessions:
+      user:
+        invalid: Mật khẩu không hợp lệ.
+        not_found_in_database: Email không hợp lệ.
+        unconfirmed: Bạn phải xác nhận địa chỉ email của mình trước khi tiếp tục.
+        signed_in: Đã đăng nhập thành công.
+  views:
+    pagination:
+      first: "&laquo; Đầu"
+      last: "Cuối &raquo;"
+      previous: "&lsaquo; Truớc"
+      next: "Sau &rsaquo;"
+      truncate: "&hellip;"
+  home:
+    index:
+      home_page: Trang chủ
+  admin:
+    home:
+      index:
+        home_page: Trang chủ
+  books:
+    index:
+      list_books: Danh sách sách
+    new:
+      create_new_book: Tạo sách mới
+      create: Tạo
+      category: Thể loại
+      title: Tiêu đề
+      cover_image: Ảnh bìa
+      publish_date: Ngày xuất bản
+      number_pages: Số trang
+      price: Giá
+      author: Tác giả
+      description: Mô tả
+    create:
+      create_success: Sách đã được tạo thành công
+      create_failure: Có lỗi xảy ra trong khi tạo sách
+    show:
+      title: Tiêu đề
+      show_book: Thông tin sách
+      no_marker: Khi đăng nhập, bạn có thể đánh dấu sách là yêu thích, đã đọc,
+        đang đọc,...
+      title: Tiều đề
+      number_pages: "Số trang "
+      author: "Tác giả "
+      price: "Giá "
+      description: Mô tả
+      comment: Bình luận
+      average_rating: Xếp hạng trung bình
+      user_of_reviews: Người dùng đánh giá
+      reviews: " đánh giá"
+      text_review: Bạn có đánh giá dưới đây
+    edit:
+      not_found: Không tìm thấy sách cần chỉnh sửa
+      edit_book: Chỉnh sửa sách
+      update: Cập nhật
+      category: Thể loại
+      title: Tiêu đề
+      cover_image: Ảnh bìa
+      publish_date: Ngày xuất bản
+      number_pages: Số trang
+      price: Giá
+      author: Tác giả
+      description: Mô tả
+    update:
+      not_found: Không tìm thấy sách cần cập nhật
+      update_success: Cập nhật sách thành công
+      update_failure: Cập nhật sách thất bại
+    destroy:
+      not_found: Không tìm thấy sách cần xoá
+      delete_success: Sách đã được xoá thành công
+      delete_failure: Có lỗi xảy ra khi xoá sách
+    book:
+      number_pages: Số trang
+      author: Tác giả
+      price: Giá
+      edit: Sửa
+  users:
+    registrations:
+      edit:
+        home_page: "Thay đổi mật khẩu"
+        current_password: "Mật khẩu hiện tại"
+        password: "Mật khẩu"
+        text_password: "(chúng tôi cần mật khẩu hiện tại của bạn để xác nhận thay đổi của bạn)"
+        text_new_password: "(để trống nếu bạn không muốn thay đổi nó)"
+        password_confirmation: "Xác nhận"
+        characters_minimum: " Tối thiểu 6 ký tự"
+        btn_update: "Cập nhật"
+        btn_back: "Trở lại"
+      new:
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+        characters_minimum: " Tối thiểu 6 ký tự"
+        signup: "Đăng ký"
+    shared:
+      _links:
+        signup: "Đăng ký"
+        login: "Đăng nhập"
+        signin_with: "Đăng nhập với %{OmniAuth::Utils.camelize(provider)}"
+        forgot_your_password: "Quên mật khẩu"
+  markers:
+    form:
+      cancel_favorite:
+        cancel_favorite: Hủy yêu thích
+      cancel_readed:
+        cancel_readed: Hủy đã đọc
+      cancel_reading:
+        cancel_reading: Hủy đang đọc
+      cancel_purchase_request:
+        cancel_purchase_request: Hủy yêu cầu mua
+      favorite:
+        favorite: Yêu thích
+      readed:
+        readed: Đã đọc
+      reading:
+        reading: Đang đọc
+      purchase_request:
+        purchase_request: Yêu cầu mua
+    create:
+      book_not_found: Không tìm thấy sách
+    destroy:
+      marker_not_found: Không tìm thấy đánh dấu
+      book_not_found: Không tìm thấy sách
+  purchase_requests:
+    request:
+      cancel: Hủy bỏ
+      confirm: Bạn muốn hủy yêu cầu mua sách?
+    index:
+      purchase_requests: Danh sách yêu cầu mua sách
+      cover_image: Ảnh bìa
+      title: Tiêu đề
+      number_pages: Số trang
+      author: Tác giả
+      price: Giá
+      action: Hành động
+      time_request: Thời gian gửi yêu cầu
+    destroy:
+      success: Hủy yêu cầu mua sách thành công
+      purchase_request_not_found: Không tìm thấy yêu cầu mua sách
+  reviews:
+    review:
+      btn_edit: Sửa
+      btn_del: Xóa
+      mess: Chưa có đánh giá nào, bạn có muốn đánh giá đầu tiên không!
+      mess_del: Bạn có chắc không?
+  create:
+      create_success: Đánh giá đã được tạo thành công
+      create_failure: Đã xảy ra lỗi khi tạo đánh giá
+  book_price: $%{price}
+  purchase_requests:
+    request:
+      cancel: Hủy bỏ
+      confirm: Bạn muốn hủy yêu cầu mua sách?
+    index:
+      purchase_requests: Danh sách yêu cầu mua sách
+      cover_image: Ảnh bìa
+      title: Tiêu đề
+      number_pages: Số trang
+      author: Tác giả
+      price: Giá
+      action: Hành động
+      time_request: Thời gian gửi yêu cầu
+    destroy:
+      success: Hủy yêu cầu mua sách thành công
+      purchase_request_not_found: Không tìm thấy yêu cầu mua sách
+  favorites:
+    favorite:
+      cancel: Hủy bỏ
+      confirm: Bạn muốn hủy cuốn sách yêu thích?
+    index:
+      list_favorites: Danh sách sách yêu thích
+      cover_image: Ảnh bìa
+      title: Tiêu đề
+      number_pages: Số trang
+      author: Tác giả
+      price: Giá
+      action: Hành động
+      favorite_time_at: Yêu thích lúc
+    destroy:
+      success: Hủy yêu thích sách thành công
+      destroy_failure: Có lỗi xảy ra khi hủy bỏ yêu thích sách
+      favorite_not_found: Không tìm thấy sách yêu thích

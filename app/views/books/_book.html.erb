@@ -1,0 +1,45 @@
+<div class="col-lg-6">
+  <div class="d-block d-md-flex listing">
+    <div class="img d-block">
+      <%= image_tag check_image_cover(book), class: "cover-books" %>
+    </div>
+    <div class="lh-content">
+      <span class="category">
+        <%= book.category.name %>
+      </span>
+      <% if user_signed_in? %>
+        <span class="bookmark
+          <%= "red" if check_favorite?(book.id, current_user) %>">
+          <span class="icon-heart favorite"></span>
+        </span>
+      <% end %>
+      <h3><%= link_to book.title, book_path(book) %></h3>
+      <address class="mb-0">
+        <%= t ".number_pages" %>:
+        <%= book.number_pages %></address>
+      <address class="mb-0">
+        <%= t ".author" %>:
+        <%= book.author %>
+      </address>
+      <address>
+        <%= t ".price" %>:
+        <%= book.price %>
+      </address>
+      <span>
+        <% if can? Book::AUTHORIZE_ADMIN, book %>
+          <%= link_to edit_book_path(book), class: "mb-1 mr-5" do %>
+            <%= image_tag "svg/edit.svg", class: "icon-crud" %>
+            <%= t ".edit" %>
+          <% end %>
+          <%= link_to book_path(book), method: :DELETE do %>
+            <%= image_tag "svg/delete.svg", class: "icon-crud" %>
+            <%= t ".delete" %>
+          <% end %>
+        <% end %>
+      </span>
+      <p class="mb-0">
+        <%= render partial: "shared/rate", object: book_rate(book) %>
+      </p>
+    </div>
+  </div>
+</div>

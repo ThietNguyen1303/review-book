@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title yield :title %></title>
+    <%= favicon_link_tag yield :icon %>
+    <%= render "layouts/head" %>
+  </head>
+
+  <body>
+    <% if !user_signed_in? %>
+      <%= render "layouts/login_modal" %>
+    <% end %>
+    <div class="site-wrap">
+      <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+      <%= render "layouts/header" %>
+      <%= render "layouts/site_blocks" %>
+      <%= yield %>
+      <%= render "layouts/footer" %>
+    </div>
+  </body>
+</html>
